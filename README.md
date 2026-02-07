@@ -3,9 +3,9 @@ Auto potion brewing script for The Legend of Pirates Online (TLOPO) using screen
 
 ## Setup
 
-1. Clone this repository
+1.Clone this repository
 
-2. Create a virtual environment:
+2.Create a virtual environment:
 
     python -m venv venv
 
@@ -15,10 +15,10 @@ Auto potion brewing script for The Legend of Pirates Online (TLOPO) using screen
 
     Mac/Linux: source venv/bin/activate
 
-4. Install dependencies:
+4.Install dependencies:
 
     pip install -r requirements.txt
 
-5. Run the script:
+5.Run the script:
 
     python auto_brewer.py
