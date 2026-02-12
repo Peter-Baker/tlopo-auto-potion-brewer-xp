@@ -24,50 +24,87 @@ stop_program = False
 def find_combo(color_left, color_right):
     if color_left == "RED" and color_right == "RED":
         print ("RED/RED")
-        pyautogui.moveTo(1546, 995)
+        pyautogui.moveTo(1473, 340)
         time.sleep(0.5)
         pyautogui.click()
     elif color_left == "RED" and color_right == "GREEN":
         print ("RED/GREEN")
-        pyautogui.moveTo(2084, 212)
-        pyautogui.click(button='right')
+        pyautogui.moveTo(2056, 374)
         time.sleep(0.5)
         pyautogui.click()
     elif color_left == "RED" and color_right == "BLUE":
         print ("RED/BLUE")
-        pyautogui.moveTo(1650, 230)
+        pyautogui.moveTo(1498, 355)
         time.sleep(0.5)
         pyautogui.click()
     elif color_left == "GREEN" and color_right == "RED":
         print ("GREEN/RED")
-        pyautogui.moveTo(2084, 212)
+        pyautogui.moveTo(2059, 394)
+        pyautogui.click(button='right')
         time.sleep(0.5)
         pyautogui.click()
     elif color_left == "GREEN" and color_right == "GREEN":
         print ("GREEN/GREEN")
-        pyautogui.moveTo(2001, 886)
+        pyautogui.moveTo(1804, 387)
         time.sleep(0.5)
         pyautogui.click()
     elif color_left == "GREEN" and color_right == "BLUE":
         print ("GREEN/BLUE")
-        pyautogui.moveTo(1861, 209)
-        pyautogui.click(button='right')
+        pyautogui.moveTo(1821, 754)
         time.sleep(0.5)
         pyautogui.click()
     elif color_left == "BLUE" and color_right == "RED":
         print ("BLUE/RED")
-        pyautogui.moveTo(1650, 230)
-        pyautogui.click(button='right')
+        pyautogui.moveTo(1931, 744)
         time.sleep(0.5)
         pyautogui.click()
     elif color_left == "BLUE" and color_right == "GREEN":
         print ("BLUE/GREEN")
-        pyautogui.moveTo(1861, 209)
+        pyautogui.moveTo(1808, 431)
+        pyautogui.click(button='right')
         time.sleep(0.5)
         pyautogui.click()
     elif color_left == "BLUE" and color_right == "BLUE":
         print ("BLUE/BLUE")
-        pyautogui.moveTo(1753, 227)
+        pyautogui.moveTo(1918, 838)
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "VOLCANIC" and color_right == "VOLCANIC":
+        print ("VOLCANIC/VOLCANIC")
+        pyautogui.moveTo(1602, 943)
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "VOLCANIC" and color_right == "RED":
+        print ("VOLCANIC/RED")
+        pyautogui.moveTo(1398, 827)
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "VOLCANIC" and color_right == "GREEN":
+        print ("VOLCANIC/GREEN")
+        pyautogui.moveTo(1695, 1308)
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "VOLCANIC" and color_right == "BLUE":
+        print ("VOLCANIC/BLUE")
+        pyautogui.moveTo(1588, 691)
+        pyautogui.click(button='right')
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "RED" and color_right == "VOLCANIC":
+        print ("RED/VOLCANIC")
+        pyautogui.moveTo(1398, 827)
+        pyautogui.click(button='right')
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "GREEN" and color_right == "VOLCANIC":
+        print ("GREEN/VOLCANIC")
+        pyautogui.moveTo(1695, 1308)
+        pyautogui.click(button='right')
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "BLUE" and color_right == "VOLCANIC":
+        print ("BLUE/VOLCANIC")
+        pyautogui.moveTo(1588, 691)
         time.sleep(0.5)
         pyautogui.click()
     else:
@@ -94,6 +131,8 @@ def check_hexagons():
             color_left = "RED"
         elif b == 248 and g == 191 and r == 22:
             color_left = "BLUE"
+        elif b == 16 and g == 48 and r == 81:
+            color_left = "VOLCANIC"
         else:
             color_left = "GREEN"
 
@@ -113,13 +152,14 @@ def check_hexagons():
             color_right = "RED"
         elif b == 182 and g == 88 and r == 14:
             color_right = "BLUE"
+        elif b == 24 and g == 63 and r == 164:
+            color_right = "VOLCANIC"
         else:
             color_right = "GREEN"
 
         # -------- Find out what combo, press buttons --------
 
         find_combo()
-
 
         # (1275, 1086) -> BGR = (9, 13, 17)
 
