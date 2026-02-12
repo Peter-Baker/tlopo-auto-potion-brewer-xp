@@ -21,6 +21,59 @@ from pynput import keyboard
 running = False
 stop_program = False
 
+def find_combo(color_left, color_right):
+    if color_left == "RED" and color_right == "RED":
+        print ("RED/RED")
+        pyautogui.moveTo(1546, 995)
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "RED" and color_right == "GREEN":
+        print ("RED/GREEN")
+        pyautogui.moveTo(2084, 212)
+        pyautogui.click(button='right')
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "RED" and color_right == "BLUE":
+        print ("RED/BLUE")
+        pyautogui.moveTo(1650, 230)
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "GREEN" and color_right == "RED":
+        print ("GREEN/RED")
+        pyautogui.moveTo(2084, 212)
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "GREEN" and color_right == "GREEN":
+        print ("GREEN/GREEN")
+        pyautogui.moveTo(2001, 886)
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "GREEN" and color_right == "BLUE":
+        print ("GREEN/BLUE")
+        pyautogui.moveTo(1861, 209)
+        pyautogui.click(button='right')
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "BLUE" and color_right == "RED":
+        print ("BLUE/RED")
+        pyautogui.moveTo(1650, 230)
+        pyautogui.click(button='right')
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "BLUE" and color_right == "GREEN":
+        print ("BLUE/GREEN")
+        pyautogui.moveTo(1861, 209)
+        time.sleep(0.5)
+        pyautogui.click()
+    elif color_left == "BLUE" and color_right == "BLUE":
+        print ("BLUE/BLUE")
+        pyautogui.moveTo(1753, 227)
+        time.sleep(0.5)
+        pyautogui.click()
+    else:
+        print("ERROR")
+
+
 def check_hexagons():
 
     with mss.mss() as sct:
@@ -63,58 +116,10 @@ def check_hexagons():
         else:
             color_right = "GREEN"
 
-        # -------- Find out what combo --------
+        # -------- Find out what combo, press buttons --------
 
-        if color_left == "RED" and color_right == "RED":
-            print ("RED/RED")
-            pyautogui.moveTo(1546, 995)
-            time.sleep(0.5)
-            pyautogui.click()
-        elif color_left == "RED" and color_right == "GREEN":
-            print ("RED/GREEN")
-            pyautogui.moveTo(2084, 212)
-            pyautogui.click(button='right')
-            time.sleep(0.5)
-            pyautogui.click()
-        elif color_left == "RED" and color_right == "BLUE":
-            print ("RED/BLUE")
-            pyautogui.moveTo(1650, 230)
-            time.sleep(0.5)
-            pyautogui.click()
-        elif color_left == "GREEN" and color_right == "RED":
-            print ("GREEN/RED")
-            pyautogui.moveTo(2084, 212)
-            time.sleep(0.5)
-            pyautogui.click()
-        elif color_left == "GREEN" and color_right == "GREEN":
-            print ("GREEN/GREEN")
-            pyautogui.moveTo(2001, 886)
-            time.sleep(0.5)
-            pyautogui.click()
-        elif color_left == "GREEN" and color_right == "BLUE":
-            print ("GREEN/BLUE")
-            pyautogui.moveTo(1861, 209)
-            pyautogui.click(button='right')
-            time.sleep(0.5)
-            pyautogui.click()
-        elif color_left == "BLUE" and color_right == "RED":
-            print ("BLUE/RED")
-            pyautogui.moveTo(1650, 230)
-            pyautogui.click(button='right')
-            time.sleep(0.5)
-            pyautogui.click()
-        elif color_left == "BLUE" and color_right == "GREEN":
-            print ("BLUE/GREEN")
-            pyautogui.moveTo(1861, 209)
-            time.sleep(0.5)
-            pyautogui.click()
-        elif color_left == "BLUE" and color_right == "BLUE":
-            print ("BLUE/BLUE")
-            pyautogui.moveTo(1753, 227)
-            time.sleep(0.5)
-            pyautogui.click()
-        else:
-            print("ERROR")
+        find_combo()
+
 
         # (1275, 1086) -> BGR = (9, 13, 17)
 
