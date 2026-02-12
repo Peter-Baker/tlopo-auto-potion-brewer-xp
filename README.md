@@ -1,5 +1,5 @@
-# tlopo-auto-potion-brewer
-Auto potion brewing script for The Legend of Pirates Online (TLOPO) using screen color detection and automated mouse input.
+# tlopo-auto-potion-brewer-xp
+Auto potion brewing script for The Legend of Pirates Online (TLOPO) using screen color detection and automated mouse input specifically for XP.
 
 ## Setup
 
@@ -21,4 +21,4 @@ Auto potion brewing script for The Legend of Pirates Online (TLOPO) using screen
 
 5.Run the script:
 
-    python auto_brewer.py
+    python main.py
